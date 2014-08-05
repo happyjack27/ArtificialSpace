@@ -1,5 +1,7 @@
 import java.util.*;
 
+import Global.Settings;
+
 public class Chemical {
 	public static Chemical[] allChemicals = new Chemical[Settings.num_chemicals];
 	

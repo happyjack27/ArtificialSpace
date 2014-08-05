@@ -1,5 +1,7 @@
 import java.util.*;
 
+import Global.Settings;
+
 public class World {
 	Vector<Cell> cells = new Vector<Cell>();
 	Cell[][][] grid = new Cell[Settings.world_size][Settings.world_size][Settings.world_size];

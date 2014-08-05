@@ -1,3 +1,5 @@
+import Global.Settings;
+
 
 public class MorphoGen {
 	//a morphogen controls the rates of a number of chemical reactions

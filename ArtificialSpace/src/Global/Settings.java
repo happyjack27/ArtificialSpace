@@ -1,3 +1,4 @@
+package Global;
 
 public class Settings {
 	//world stats
@@ -10,6 +11,7 @@ public class Settings {
 	public static int num_internals = 10;
 	public static int num_sigmoids = 10;
 	public static int num_controlled_reactions = 10;
+	public static double interaction_distance = 1;
 
 
 }

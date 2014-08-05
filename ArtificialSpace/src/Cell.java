@@ -1,5 +1,7 @@
 import java.util.*;
 
+import Global.Settings;
+
 public class Cell {
 	
 	double[] chemical_quantities = new double[Settings.num_chemicals];

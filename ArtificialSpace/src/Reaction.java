@@ -1,3 +1,5 @@
+import Global.Settings;
+
 
 public class Reaction {
 	public static Reaction[] allUncontrolledReactions = new Reaction[Settings.num_uncontrolled_reactions];
