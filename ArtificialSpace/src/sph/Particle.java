@@ -14,7 +14,14 @@ public class Particle {
 	double[] x = new double[3];
 	double[] dx = new double[3];
 	double[] ddx = new double[3];
+	double no_force_distance_squared = 1;
 	//do discrete transitions to particle states - full or nothing.  based on probability.
+	
+	public double getLiquidForce(double distance_squared) {
+		if( distance_squared >= no_force_distance_squared)
+			return 0;
+		return (no_force_distance_squared-distance_squared)/distance_squared;
+	}
 	
 	public void updateNeighborList() {
 		neighborListSwap.clear();
@@ -25,9 +32,13 @@ public class Particle {
 				neighborListSwap.add(p);
 			}
 			for( Particle p2 : p.neighborList) {
+				if( p2 == this)
+					continue;
 				d = distance_squared(this.x,p2.x);
 				if( d <= id_squared) {
-					neighborListSwap.add(p2);
+					if( !neighborListSwap.contains(p2)) {
+						neighborListSwap.add(p2);
+					}
 				}
 			}
 		}
